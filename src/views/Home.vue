@@ -2,10 +2,12 @@
  * @Description: 主页
  * @Author: renlu
  * @Date: 2021-07-10 19:11:32
- * @LastEditTime: 2021-09-07 19:41:47
+ * @LastEditTime: 2021-09-07 19:44:00
  * @LastEditors: renlu
 -->
-<template></template>
+<template>
+  <span></span>
+</template>
 
 <script lang="ts">
 export default {
