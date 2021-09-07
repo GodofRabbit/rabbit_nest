@@ -12,6 +12,16 @@ export default defineConfig({
     }
   },
   base: './', // 设置打包路径
+  css: {
+    preprocessorOptions: { // 指定传递给 CSS 预处理器的选项
+      scss: {
+        additionalData: `
+          @import "@/assets/theme/variable.scss";
+          @import "@/assets/theme/mixin.scss";
+        `
+      }
+    }
+  },
   server: {
     port: 3000, // 设置服务启动端口号
     open: true, // 设置服务启动时是否自动打开浏览器
