@@ -1,18 +1,20 @@
 <template>
-  <Home />
+  <router-view v-slot="{ Component }">
+    <keep-alive>
+      <component :is="Component" />
+    </keep-alive>
+  </router-view>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Home from '@/views/Home.vue'
 
 export default defineComponent({
-  name: 'App',
-  components: {
-    Home
-  },
   mounted() {
     this.$loading.show()
+    setTimeout(() => {
+      this.$loading.hide()
+    }, 5000)
   }
 })
 </script>
